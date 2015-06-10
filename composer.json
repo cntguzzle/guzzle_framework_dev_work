@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "5.3.0",
+        "guzzlehttp/oauth-subscriber": "^0.2.0",
+        "commerceguys/guzzle-oauth2-plugin": "2.1.0"
+    }
+}
