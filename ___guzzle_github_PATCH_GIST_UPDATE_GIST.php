@@ -8,30 +8,46 @@ function get_time(){
     return time();
 };
 
-$github_api_token = '01295690e06f4d57232de3d8442f29a271b5b0fa';
+$github_api_token = '295398f3dc4da7da1eb717babf948179a91a0860';
 
-$github_gist_paramaters = array(
+$github_gist_parameters = array(
     'description' => ''.get_time(),
     'public' => true,
-    'files' => array('file_name_'.get_time().'.txt' => array('content' => 'content_'.get_time()))
+    'files' => array(
+        'file_name_'.get_time().'.txt' => array(
+            'content' => 'data inside the file')
+        )
+);
+
+$client_header_parameters = array(
+    'headers' => [
+        'User-Agent' => 'GUZZLE_DEMO',
+        'Content-Type' => 'application/json'
+    ]
 );
 
 
-$json_data = json_encode($github_gist_paramaters);
+$json_data = json_encode($github_gist_parameters);
 
 
 $client = new Client();
+
+
+
 
 $request = $client->createRequest('POST', 'https://api.github.com/gists',[
     'headers' => [
     'User-Agent' => 'GUZZLE_DEMO',
         'Content-Type' => 'application/json'
         ],
-    'auth' => ['token',$github_api_token],
+    'auth' => ['token','295398f3dc4da7da1eb717babf948179a91a0860'],
     
     'body' => $json_data
     ]
 );
+
+
+
 
 $response = $client->send($request);
 var_dump($response->getBody()->getContents());

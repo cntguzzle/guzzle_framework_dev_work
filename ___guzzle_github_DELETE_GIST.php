@@ -1,0 +1,63 @@
+<?php
+/*
+curl -v -H 'Authorization: token xxx' https://api.github.com
+
+Look for the X-OAuth-Scopes response header which will have the list of scopes:
+
+X-OAuth-Scopes: user, public_repo, repo, gist
+
+However, to delete a repository, the token needs to have the delete_repo scope.
+
+So, you need a token that has different scopes than the one you have. You can create such a token using the Authorizations API:
+
+*/
+
+require_once 'vendor/autoload.php';
+use GuzzleHttp\Client;
+use GuzzleHttp\Message\Request;
+
+$github_api_token = '01295690e06f4d57232de3d8442f29a271b5b0fa';
+
+//GITHUB API requires a header USER-AGENT to be passed
+//The value for the USER_AGENT can be any value execpt NULL.
+$github_api_url = 'https://api.github.com/';
+
+$url = 'http://httpbin.org';
+
+$client = new Client();
+$request = $client->createRequest('','');
+
+$request->setUrl($url.'/user-agent');
+$request->setMethod('GET');
+
+
+
+
+$response = $client->send($request)->getBody()->getContents();
+
+$json_data = json_decode($response);
+//JSON Data with DASHES requires {'name-of-dash-object'}
+
+echo $json_data->{'user-agent'};
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------
+
+
+//$request->setHeader('user-agent', 'guzzle_demo');
+
+//echo $client->send($request)->getBody()->getContents();
+//https://api.github.com/gists/a9a40a4a6c0ce5dc2c0b
+
+//$request->setMethod('DELETE');
+//https://api.github.com/gists/88e18d135012bdda1656
+
+
+?>

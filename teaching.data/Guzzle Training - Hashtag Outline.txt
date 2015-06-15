@@ -1,0 +1,24 @@
+Guzzle Training - Hashtag Outline
+
+:: understanding the information returned ::
+------------------------------------------
+
+- how is the data that is returned formatted?
+- how do you handle multidimensional arrays?
+
+* https://docs.aws.amazon.com/aws-sdk-php/latest/class-Guzzle.Http.Message.Header.HeaderCollection.html
+
+________________________________________________
+var_dump($response_from_the_api);
+=================================================
+GuzzleHttp\Psr7\Response Object
+(
+    [headers:GuzzleHttp\Psr7\Response:private] => Array
+        (
+            [content-type] => Array
+                (
+                    [0] => text/html
+                )
+		)
+)
+=================================================
