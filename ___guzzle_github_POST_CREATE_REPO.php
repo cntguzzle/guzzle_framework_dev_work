@@ -9,7 +9,7 @@ function get_time(){
 };
 
 
-$github_api_token = '9bba9840807a54bc23b8a467057b7443867ec4c3___';
+$github_api_token = '9bba9840807a54bc23b8a467057b7443867ec4c3';
 $github_api_url = 'https://api.github.com/user/repos';
 
 

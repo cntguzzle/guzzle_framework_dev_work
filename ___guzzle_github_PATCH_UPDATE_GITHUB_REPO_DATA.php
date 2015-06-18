@@ -9,7 +9,7 @@ function get_time(){
 };
 
 
-$github_api_token = '9bba9840807a54bc23b8a467057b7443867ec4c3';
+$github_api_token = '8f6bf8fa87e97ddc9c97a90de0ff111879ba8bdc';
 $github_api_base_url = 'https://api.github.com';
 $github_api_repository_base_url = 'https://api.github.com/user/repos';
 
@@ -29,9 +29,7 @@ $request = $client->createRequest('', '',[
         'Content-Type' => 'application/json'
         ],
     'auth' => ['token',$github_api_token],
-    
-    //'body' => json_encode($github_repository_paramaters)
-    ]
+   ]
 );
 
 // GET GITHUB API BASE URLS FOR REQUESTING USER URL PATHS
@@ -52,14 +50,10 @@ $request->setUrl($github_api_user_urls->repos_url);
 $request->setMethod('GET');
 $github_api_user_repos = json_decode($client->send($request)->getBody()->getContents());
 
-$github_api_user_repo_name = array();
+$github_api_user_repo_url = array();
 foreach ($github_api_user_repos as $results){
-    $github_api_user_repo_name[] = $results->name;
+    $github_api_user_repo_url[] = $results->url;
 };
-
-//var_dump($github_api_user_repo_name);
-
-
 
 //PUT /repos/:owner/:repo/contents/:path
 

@@ -9,8 +9,8 @@ function get_time(){
 };
 
 
-$github_user_name = 'cntguzzle_____';
-$github_user_password = 'jojo1125____';
+$github_user_name = 'cntguzzle';
+$github_user_password = 'jojo1125';
 
 
 $github_api_base_url = 'https://api.github.com';
@@ -19,13 +19,28 @@ $github_api_base_url = 'https://api.github.com';
 $github_api_token_paramaters = array(
     'scopes' => [
         'repo',
+        'repo:status',
+        'repo_deployment',
         'public_repo',
-        'gist',
         'delete_repo',
-        'user'
+        'user',
+        'user:email',
+        'user:follow',
+        'admin:org',
+        'write:org',
+        'read:org',
+        'admin:public_key',
+        'write:public_key',
+        'read:public_key',
+        'admin:repo_hook',
+        'write:repo_hook',
+        'read:repo_hook',
+        'admin:org_hook',
+        'gist',
+        'notifications'        
         ],
-    'note' => 'custom token made from the github api - '.get_time(),
-    'note_url' => 'detailed note about the token - '.get_time()
+    'note' => 'Master API Token - Created @ '.get_time(),
+    'note_url' => 'All options selected for API Access Testing - Created @ '.get_time()
     
 );
 

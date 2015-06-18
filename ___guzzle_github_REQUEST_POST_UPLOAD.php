@@ -9,7 +9,7 @@ function get_time(){
 };
 
 
-$github_api_token = '01295690e06f4d57232de3d8442f29a271b5b0fa_____';
+$github_api_token = '01295690e06f4d57232de3d8442f29a271b5b0fa';
 
 //GITHUB API requires a header USER-AGENT to be passed
 //The value for the USER_AGENT can be any value execpt NULL.

@@ -8,7 +8,7 @@ function get_time(){
     return time();
 };
 
-$github_api_token = '01295690e06f4d57232de3d8442f29a271b5b0fa';
+$github_api_token = '8f6bf8fa87e97ddc9c97a90de0ff111879ba8bdc';
 
 $github_gist_paramaters = array(
     'description' => ''.get_time(),

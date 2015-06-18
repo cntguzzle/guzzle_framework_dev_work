@@ -16,7 +16,7 @@ require_once 'vendor/autoload.php';
 use GuzzleHttp\Client;
 use GuzzleHttp\Message\Request;
 
-$github_api_token = '01295690e06f4d57232de3d8442f29a271b5b0fa';
+$github_api_token = '8f6bf8fa87e97ddc9c97a90de0ff111879ba8bdc';
 
 //GITHUB API requires a header USER-AGENT to be passed
 //The value for the USER_AGENT can be any value execpt NULL.

@@ -9,7 +9,7 @@ function get_time(){
 };
 
 
-$github_user_name = 'cntguzzle_____';
+$github_user_name = 'cntguzzle____';
 $github_user_password = 'jojo1125____';
 
 
